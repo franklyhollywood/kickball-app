@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
-import { getTeams } from '../services/teams.js';
+import React from 'react';
 
 export default function TeamList({ teams }) {
 	return (

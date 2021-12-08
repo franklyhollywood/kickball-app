@@ -6,3 +6,4 @@ test('renders learn react link', () => {
 	const linkElement = screen.getByText(/Home is here./i);
 	expect(linkElement).toBeInTheDocument();
 });
+//Try it again if I should even bother

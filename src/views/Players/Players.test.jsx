@@ -18,3 +18,4 @@ it('should render a detailed view of an individual player', async () => {
 	expect(players).toBeInTheDocument();
 });
 //tested awesome
+//TESTED AWESOME!!

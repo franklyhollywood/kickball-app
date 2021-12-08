@@ -15,7 +15,7 @@ export default function PlayerDetail() {
 	}, [id]);
 
 	if (loading) {
-		return <h1> Wait For It </h1>;
+		return <h1> Any Second Now... </h1>;
 	}
 
 	return (

@@ -12,7 +12,7 @@ export default function Teams() {
 			.then(() => setLoading(false));
 	}, []);
 	if (loading) {
-		return <h1>Wait for it</h1>;
+		return <h1>Any Second Now...</h1>;
 	}
 	return (
 		<div>

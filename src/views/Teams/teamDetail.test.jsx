@@ -1,24 +1,19 @@
 import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, Switch, Route } from 'react-router-dom';
 import TeamDetail from './TeamDetail';
 
 it('should render a detailed view of an individual team', async () => {
 	render(
-		<MemoryRouter>
-			<TeamDetail
-				label='The value of the label prop...'
-				match={{ params: { teamId: '3' } }}
-			/>
+		<MemoryRouter initialEntries={['/teams/10']}>
+			<Switch>
+				<Route exact path='/teams/:id' component={TeamDetail} />
+			</Switch>
 		</MemoryRouter>
 	);
 
-	screen.getByText('Loading team...');
+	screen.getByText('Any Second Now...', { exact: false });
 
-	const teamName = await screen.findByText('Lakeville Thunderfeet', {
-		exact: false,
-	});
-	const customLabel = screen.getByText('The value of the label prop...');
+	const teamName = await screen.findByText('Acme USA');
 
 	expect(teamName).toBeInTheDocument();
-	expect(customLabel).toBeInTheDocument();
 });

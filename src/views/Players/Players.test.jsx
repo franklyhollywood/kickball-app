@@ -13,7 +13,7 @@ it('should render a detailed view of an individual player', async () => {
 
 	screen.getByText('Any Second Now...', { exact: false });
 
-	const players = await screen.findByText('Ben E. Jetts');
+	const players = await screen.findByText('Johnny Appleseed');
 
 	expect(players).toBeInTheDocument();
 });

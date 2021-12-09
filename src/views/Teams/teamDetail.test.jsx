@@ -4,7 +4,7 @@ import TeamDetail from './TeamDetail';
 
 it('should render a detailed view of an individual team', async () => {
 	render(
-		<MemoryRouter initialEntries={['/teams/10']}>
+		<MemoryRouter initialEntries={['/teams/1']}>
 			<Switch>
 				<Route exact path='/teams/:id' component={TeamDetail} />
 			</Switch>
@@ -13,7 +13,7 @@ it('should render a detailed view of an individual team', async () => {
 
 	screen.getByText('Any Second Now...', { exact: false });
 
-	const teamName = await screen.findByText('Acme USA');
+	const teamName = await screen.findByText('Bridge City Sneakers');
 
 	expect(teamName).toBeInTheDocument();
 });

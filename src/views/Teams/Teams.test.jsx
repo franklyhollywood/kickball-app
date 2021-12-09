@@ -13,7 +13,7 @@ it('should render a list of teams', async () => {
 
 	screen.getByText('Any Second Now...', { exact: false });
 
-	const teams = await screen.findByText('Acme USA');
+	const teams = await screen.findByText('Bridge City Sneakers');
 
 	expect(teams).toBeInTheDocument();
 });

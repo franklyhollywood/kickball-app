@@ -1,21 +1,6 @@
 import { Link } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
-import { getPlayers } from '../services/players.js';
 
-function PlayerList() {
-	const [players, setPlayers] = useState([]);
-	const [loading, setLoading] = useState(true);
-
-	useEffect(() => {
-		getPlayers()
-			.then((res) => setPlayers(res))
-			.then(() => setLoading(false));
-	}, []);
-
-	if (loading) {
-		return <h1>Any Second Now...</h1>;
-	}
-
+export default function PlayerList({ players }) {
 	return (
 		<>
 			<h1>Players:</h1>
@@ -33,5 +18,3 @@ function PlayerList() {
 		</>
 	);
 }
-
-export default PlayerList;

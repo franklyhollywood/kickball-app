@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { getPlayerById } from '../../services/players';
 
 export default function PlayerDetail() {
@@ -19,6 +19,9 @@ export default function PlayerDetail() {
 
 	return (
 		<div>
+			<Link to={`/players/${player.id}`} className='App-link'>
+				{player.name}
+			</Link>
 			<p>{player.name}</p>
 			<p>{player.position}</p>
 			<p>{player.teams.name}</p>

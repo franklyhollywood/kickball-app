@@ -55,14 +55,6 @@ export default function AddPlayers() {
           />
 
           <label>Team:</label>
-          {/* <input
-						id='teamId'
-						name='teamId'
-						type='text'
-						value={teamId}
-						
-					/> */}
-
           <select value={teamId} onChange={assignTeamHandler}>
             {teams.map((team) => {
               return (

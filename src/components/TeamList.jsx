@@ -22,6 +22,19 @@ export default function TeamList() {
     const shouldDelete = confirm(`Are you sure you want to delete ${name}?`);
 
     if (shouldDelete) {
+      try {
+        await deleteTeamById(id);
+        await loadTeams();
+      } catch (err) {
+        if (err.code === '23503') {
+          alert('You need to delete the players first...');
+        }
+      }
+    } else {
+      return;
+    }
+
+    if (shouldDelete) {
       await deleteTeamById(id);
       await loadTeams();
     }

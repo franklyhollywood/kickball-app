@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { deleteTeamById, getTeams } from '../services/teams';
 

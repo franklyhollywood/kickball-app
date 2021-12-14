@@ -17,7 +17,7 @@ export default function TeamList() {
     loadTeams();
   }, []);
 
-  const history = useHistory();
+  // const history = useHistory();
   const handleDelete = async ({ id, name }) => {
     const shouldDelete = confirm(`Are you sure you want to delete ${name}?`);
 

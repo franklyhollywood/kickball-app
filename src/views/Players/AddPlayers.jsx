@@ -27,7 +27,6 @@ export default function AddPlayers() {
   };
 
   function assignTeamHandler(e) {
-    console.log(e.target.value);
     setTeamId(e.target.value);
   }
 

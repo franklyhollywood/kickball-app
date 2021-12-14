@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { deleteTeamById, getTeams } from '../services/teams';
 
@@ -17,7 +17,7 @@ export default function TeamList() {
     loadTeams();
   }, []);
 
-  const history = useHistory();
+  // const history = useHistory();
   const handleDelete = async ({ id, name }) => {
     const shouldDelete = confirm(`Are you sure you want to delete ${name}?`);
 

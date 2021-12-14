@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getPlayers, deletePlayerById } from '../services/players.js';
 
 export default function PlayerList() {
   const [players, setPlayers] = useState([]);
   const [loading, setLoading] = useState(true);
-  const history = useHistory();
+  // const history = useHistory();
 
   const loadPlayers = async () => {
     getPlayers()
